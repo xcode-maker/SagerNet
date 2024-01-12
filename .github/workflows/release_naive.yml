@@ -113,14 +113,6 @@ jobs:
         with:
           name: "SHA256-ARM64 ${{ env.SHA256_ARM64 }}"
           path: ${{ env.SUM_ARM64 }}
-      - uses: actions/upload-artifact@v3
-        with:
-          name: "SHA256-X64 ${{ env.SHA256_X64 }}"
-          path: ${{ env.SUM_X64 }}
-      - uses: actions/upload-artifact@v3
-        with:
-          name: "SHA256-X86 ${{ env.SHA256_X86 }}"
-          path: ${{ env.SUM_X86 }}
   publish:
     name: Publish Release
     if: github.event.inputs.publish != 'y'
